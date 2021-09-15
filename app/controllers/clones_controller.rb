@@ -5,7 +5,14 @@ class ClonesController < ApplicationController
     @clone = Clone.new
   end
   def create
-    Clone.create(clones_params)
+    @clone = Clone.new(clones_params)
     redirect_to clone_path
   end
+
+  private
+
+  def clones_params
+
+  end
+
 end
