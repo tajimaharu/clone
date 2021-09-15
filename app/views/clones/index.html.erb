@@ -1,0 +1,22 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="left-bar col-md-2">
+      <h3>aa</h3>
+      <h4>1</h4>
+      <h4>1</h4>
+      <h4>1</h4>
+      <h4>1</h4>
+      <h4>1</h4>
+    </div>
+    <div class="content col-md-7">
+      <%= form_with(model: @clone, local: true) do |form| %>
+      <%= form.label :content %>
+      <%= form.text_field :content %>
+      <%= form.submit value="Tweet"%>
+      <% end %>
+    </div>
+    <div class="right-bar col-md-3">
+      <h3>aa</h3>
+    </div>
+  </div>
+</div>
