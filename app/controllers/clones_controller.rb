@@ -1,18 +1,25 @@
 class ClonesController < ApplicationController
   def index
+    @clones = Clone.all
   end
+
   def new
     @clone = Clone.new
   end
+
   def create
-    @clone = Clone.new(clones_params)
-    redirect_to clone_path
+    @clone = Clone.create(clones_params)
+    redirect_to clones_path
   end
 
-  private
+  def show
+  end
+
+
+private
 
   def clones_params
-
+    params.permit(:content)
   end
 
 end

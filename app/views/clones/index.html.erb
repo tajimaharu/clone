@@ -14,6 +14,16 @@
       <%= form.text_field :content %>
       <%= form.submit value="Tweet"%>
       <% end %>
+
+      <br>
+      <h3>tweet</h3>
+      </br>
+
+      <% @clones.each do |clone| %>
+        <tr>
+          <td><%= clone.content %></td>
+        </tr>
+      <% end %>
     </div>
     <div class="right-bar col-md-3">
       <h3>aa</h3>
