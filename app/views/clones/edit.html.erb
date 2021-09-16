@@ -1,0 +1,10 @@
+<h2>編集画面</h2>
+
+<%= form_with(model: @clone, local: true) do |form| %>
+
+<%= form.label :content %>
+<br>
+<%= form.text_area :content %>
+</br>
+<%= form.submit value="更新" %>
+<% end %>

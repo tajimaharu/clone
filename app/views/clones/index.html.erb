@@ -1,8 +1,8 @@
 <div class="container-fluid">
   <div class="row">
     <div class="left-bar col-md-2">
-      <h3>aa</h3>
-      <h4>1</h4>
+      <h3>twitterクローン</h3>
+      <h4>ページサイズで要素非表示</h4>
       <h4>1</h4>
       <h4>1</h4>
       <h4>1</h4>
@@ -10,23 +10,30 @@
     </div>
     <div class="content col-md-7">
       <%= form_with(model: @clone, local: true) do |form| %>
+
       <%= form.label :content %>
-      <%= form.text_field :content %>
+      <br>
+      <%= form.text_area :content %>
+      </br>
       <%= form.submit value="Tweet"%>
       <% end %>
 
       <br>
-      <h3>tweet</h3>
+      <h2>tweet</h2>
       </br>
+      <p><%= notice %></p>
 
       <% @clones.each do |clone| %>
-        <tr>
+        <br>
           <td><%= clone.content %></td>
-        </tr>
+          <td class="btn"><%= link_to "編集", edit_clone_path(clone.id) %></td>
+          <td class="btn"><%= link_to "削除", clone_path(clone.id), method: :delete ,data: { confirm: '本当に削除していいですか？' } %></td>
+        </br>
       <% end %>
+
     </div>
     <div class="right-bar col-md-3">
-      <h3>aa</h3>
+      <h3>広告とかトレンドとか表示されてる場所</h3>
     </div>
   </div>
 </div>
