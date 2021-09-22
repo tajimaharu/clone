@@ -1,3 +1,4 @@
+
 html {
   position: relative;
   min-height: 100%;
@@ -28,6 +29,7 @@ ul{
     padding:10% 10%;
     box-sizing: border-box;
     border: solid 1px #fff;
+    margin-bottom: 65px;
 }
 .right-bar{
     background-color:#DCDCDC;
@@ -35,6 +37,7 @@ ul{
     padding:10% 10%;
     box-sizing: border-box;
     border: solid 1px #fff;
+    margin-bottom: 65px;
 }
 .topic li{
     margin:1%;
@@ -83,17 +86,18 @@ footer {
 }
 .content {
   padding: 0.5em 1em;
-  margin: 2em 0;
   color: #5d627b;
   background: white;
   border-top: solid 5px #5d627b;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+  margin-bottom: 65px;
 }
 .frame {
     border-top: solid 5px #5989cf;
     border-bottom: solid 5px #5989cf;
 }
 .btn {
+  color: blue;
   float: right;
 }
 

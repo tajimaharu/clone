@@ -1,11 +1,12 @@
 class ClonesController < ApplicationController
   before_action :set_clone, only: [:edit, :update, :destroy]
+  before_action :get_all_clones, only: [:index, :create]
+  before_action :set_new_clone, only: [:index, :new]
+
   def index
-    @clones = Clone.all
   end
 
   def new
-    @clone = Clone.new
   end
 
   def create
@@ -13,7 +14,7 @@ class ClonesController < ApplicationController
     if @clone.save
       redirect_to clones_path
     else
-      render "clones"
+      render :index
     end
   end
 
@@ -40,5 +41,13 @@ private
 
   def set_clone
     @clone = Clone.find(params[:id])
+  end
+
+  def get_all_clones
+    @clones = Clone.all
+  end
+
+  def set_new_clone
+    @clone = Clone.new
   end
 end
