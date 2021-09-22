@@ -3,10 +3,6 @@
     <div class="left-bar col-md-2">
       <h3>twitterクローン</h3>
       <h4>ページサイズで要素非表示</h4>
-      <h4>1</h4>
-      <h4>1</h4>
-      <h4>1</h4>
-      <h4>saigo</h4>
     </div>
     <div class="content col-md-7">
       <%= form_with(model: @clone, local: true) do |form| %>
@@ -23,11 +19,11 @@
       </br>
       <p><%= notice %></p>
 
-      <% @clones.each do |clone| %>
+      <% @clones.reverse.each do |clone| %>
         <br>
           <td><%= clone.content %></td>
-          <td class="btn"><%= link_to "編集", edit_clone_path(clone.id) %></td>
-          <td class="btn"><%= link_to "削除", clone_path(clone.id), method: :delete ,data: { confirm: '本当に削除していいですか？' } %></td>
+          <td><%= link_to "削除", clone_path(clone.id), method: :delete, data: { confirm: '本当に削除していいですか？' }, class: "btn" %></td>
+          <td><%= link_to "編集", edit_clone_path(clone.id), class: "btn" %></td>
         </br>
       <% end %>
 

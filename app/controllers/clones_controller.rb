@@ -21,7 +21,7 @@ class ClonesController < ApplicationController
   end
 
   def update
-    if @clone.update(clone_params)
+    if @clone.update(clones_params)
       redirect_to clones_path, notice: "更新しました"
     else
       render :edit
@@ -35,7 +35,7 @@ class ClonesController < ApplicationController
 private
 
   def clones_params
-    params.permit(:content)
+    params.require(:clone).permit(:content)
   end
 
   def set_clone
