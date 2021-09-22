@@ -20,7 +20,7 @@
 
       <%= form.label :content %>
       <br>
-      <%= form.text_area :content %>
+      <%= form.text_area :content, class: "form-area" %>
       </br>
       <%= form.submit value="Tweet"%>
       <% end %>
@@ -32,7 +32,7 @@
 
       <% @clones.reverse.each do |clone| %>
         <br>
-          <td><%= clone.content %></td>
+          <td style="white-space:pre-wrap;"><%= clone.content %></td>
           <td><%= link_to "削除", clone_path(clone.id), method: :delete, data: { confirm: '本当に削除していいですか？' }, class: "btn-top" %></td>
           <td><%= link_to "編集", edit_clone_path(clone.id), class: "btn-top" %></td>
         </br>

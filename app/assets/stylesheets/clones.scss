@@ -91,6 +91,7 @@ footer {
   border-top: solid 5px #5d627b;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
   margin-bottom: 65px;
+  table-layout: fixed;
 }
 .frame {
     border-top: solid 5px #5989cf;
@@ -104,6 +105,10 @@ footer {
   color: #fff;
   margin-right: 10px;
   float: right;
+}
+.form-area {
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
 @media screen and (max-width: 768px){

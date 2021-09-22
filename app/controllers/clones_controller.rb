@@ -33,6 +33,11 @@ class ClonesController < ApplicationController
     @clone.destroy
     redirect_to clones_path, notice: "削除しました"
   end
+
+  def confirm
+    @clone = Clone.new(clones_params)
+  end
+  
 private
 
   def clones_params
