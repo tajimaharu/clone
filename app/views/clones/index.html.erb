@@ -1,13 +1,19 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="left-bar col-md-2">
+    <div class="large-left-bar col-md-2">
       <h3>twitterクローン</h3>
-      <h4>トップ</h4>
-      <h4>投稿</h4>
-      <h4>プロフィール</h4>
+      <h4><a href="/"><img src="https://storage.googleapis.com/ttrinity/_img/product/10/10526/1571620/design_img_f_1571620_s.png" class="side-img">トップ</a></h4>
+      <h4><a href="/clones"><img src="https://t.pimg.jp/035/543/793/5/35543793.jpg" class="side-img">投稿</a></h4>
+      <h4><img src="https://tadworks.jp/wp-content/uploads/2020/08/profile_icon.png" class="side-img">プロフィール</h4>
     </div>
-    <div class="content col-md-7">
-      <%= form_with(model: @clone, local: true) do |form| %>
+    <div class="small-left-bar col-sm-1">
+      <h3><img src="https://c.tenor.com/TN5QzKICcUMAAAAM/dancing-bird.gif" class="title-img"></h3>
+      <h4><a href="/"><img src="https://storage.googleapis.com/ttrinity/_img/product/10/10526/1571620/design_img_f_1571620_s.png" class="side-img"></a></h4>
+      <h4><a href="/clones"><img src="https://t.pimg.jp/035/543/793/5/35543793.jpg" class="side-img"></a></h4>
+      <h4><img src="https://tadworks.jp/wp-content/uploads/2020/08/profile_icon.png" class="side-img"></h4>
+    </div>
+    <div class="content col-md-7 col-sm-11">
+      <%= form_with(model: @clone, local: true, url: confirm_clones_path) do |form| %>
 
       <% if @clone.errors.any? %>
       <div id="error_explanation">

@@ -11,10 +11,14 @@ class ClonesController < ApplicationController
 
   def create
     @clone = Clone.create(clones_params)
-    if @clone.save
-      redirect_to clones_path
+    if params[:back]
+      render :new
     else
-      render :index
+      if @clone.save
+        redirect_to clones_path
+      else
+        render :index
+      end
     end
   end
 
@@ -37,7 +41,7 @@ class ClonesController < ApplicationController
   def confirm
     @clone = Clone.new(clones_params)
   end
-  
+
 private
 
   def clones_params
