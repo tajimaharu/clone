@@ -38,15 +38,23 @@
       </br>
       <p><%= notice %></p>
 
-      <% @clones.reverse.each do |clone| %>
-        <br>
-          <td style="white-space:pre-wrap;"><%= clone.content %></td>
-          <td><%= link_to "削除", clone_path(clone.id), method: :delete, data: { confirm: '本当に削除していいですか？' }, class: "btn-top" %></td>
-          <td><%= link_to "編集", edit_clone_path(clone.id), class: "btn-top" %></td>
-        </br>
-      <% end %>
 
+
+        <% @clones.reverse.each do |clone| %>
+          <br>
+          <div class="a">
+            <div class="b"><td><%= clone.content %></td></div>
+              <div class="c">
+              <td><%= link_to "削除", clone_path(clone.id), method: :delete, data: { confirm: '本当に削除していいですか？' }, class: "btn-top" %></td>
+              <td><%= link_to "編集", edit_clone_path(clone.id), class: "btn-top" %></td>
+              </div>
+          </div>
+          </br>
+          <% end %>
+
+      </div>
     </div>
+
     <div class="right-bar col-md-3">
       <h3>広告とかトレンドとか表示されてる場所</h3>
     </div>

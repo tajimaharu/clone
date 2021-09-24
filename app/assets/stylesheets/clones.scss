@@ -107,6 +107,18 @@ footer {
     border-top: solid 5px #5989cf;
     border-bottom: solid 5px #5989cf;
 }
+.a {
+  display:flex;
+  justify-content: space-between;
+  text-align: left;
+}
+.b {
+  width: calc(100% - 180px);
+  word-break: break-all;
+  white-space: pre-wrap;
+}
+.c {
+}
 .btn-top {
   text-align: center;
   height: 30px;
@@ -119,6 +131,9 @@ footer {
 .form-area {
   white-space: pre-wrap;
   word-wrap: break-word;
+}
+.tweet_text {
+  text-wrap: balance;
 }
 .title-img {
   width: 60px;

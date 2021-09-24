@@ -16,7 +16,6 @@ ActiveRecord::Schema.define(version: 2021_09_08_035251) do
   enable_extension "plpgsql"
 
   create_table "clones", force: :cascade do |t|
-    t.string "title"
     t.text "content"
   end
 
