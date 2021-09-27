@@ -35,8 +35,8 @@ ul{
 .small-left-bar{
     background-color:#F3A7AB;
     color:#fff;
-    padding:2%;
     box-sizing: border-box;
+    padding:2%;
     border: solid 1px #fff;
     margin-bottom: 65px;
     text-align: left;
@@ -133,7 +133,7 @@ footer {
   text-wrap: balance;
 }
 .title-img {
-  width: 60px;
+  width: 40px;
 }
 .side-img {
   width: 20px;
@@ -145,6 +145,11 @@ footer {
   }
 }
 @media screen and (min-width: 768px){
+.small-left-bar {
+  display: none !important;
+  }
+}
+@media screen and (max-width: 575px){
 .small-left-bar {
   display: none !important;
   }
